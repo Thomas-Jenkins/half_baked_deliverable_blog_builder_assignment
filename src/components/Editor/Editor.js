@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Editor.css';
 
-export default function Editor({ title, setTitle, subtitle, setSubtitle, post, setPost }) {
+export default function Editor({ title, setTitle, subtitle, setSubtitle, post, setPost, titleFont, setTitleFont }) {
   return (
     <div className="editor">
       <div className="form-control">
@@ -14,7 +14,7 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, post, s
         <label>Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select name="titleFont" value={titleFont} onChange={(e) => setTitleFont(e.target.value)}>
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
